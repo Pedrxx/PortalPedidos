@@ -1,0 +1,60 @@
+{% extends "paginas/modelo_index.html" %}
+
+{% block titulo %}
+    Portal de Pedidos - Inserir
+{% endblock titulo %}
+
+{% block titulo_main %}
+    Inserir
+{% endblock titulo_main %}
+
+{% block main_div %}
+<div class="container mt-5">
+    <h2>Inserir Pedido</h2>
+    <form>
+        <div class="mb-3">
+            <label for="pedidoInput" class="form-label">Pedido</label>
+            <input type="text" class="form-control" id="pedidoInput" placeholder="Número do Pedido">
+        </div>
+        <div class="mb-3">
+            <label for="semanaSelect" class="form-label">Semana</label>
+            <select class="form-select" id="semanaSelect">
+                <option selected>Escolha a semana...</option>
+                <option value="1">Semana 1</option>
+                <option value="2">Semana 2</option>
+                <option value="3">Semana 3</option>
+                <option value="4">Semana 4</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="dropdownButton" class="form-label">Categoria</label>
+            <select class="form-select" id="dropdownButton">
+                <option selected>Selecione o produto...</option>
+                <option value="1">Categoria 1</option>
+                <option value="2">Categoria 2</option>
+                <option value="3">Categoria 3</option>
+                <!-- Adicione mais opções de acordo com suas necessidades -->
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="quantidadeInput" class="form-label">Quantidade</label>
+            <input type="number" class="form-control" id="quantidadeInput" placeholder="Quantidade">
+        </div>
+
+        <button type="submit" class="btn btn-primary" onclick="adicionarItem()">Adicionar Item</button>
+
+        <h3 class="mt-5">Itens do Pedido</h3>
+        <table class="table" id="tabelaPedidos">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Itens adicionados aparecerão aqui -->
+            </tbody>
+        </table>
+    </form>
+</div>
+{% endblock main_div %}

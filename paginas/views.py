@@ -1,11 +1,11 @@
 from django.views.generic import TemplateView
 
-# Cria uma view para a pagina inicial
-# com herança da classe TemplateView
+class InserirView(TemplateView):
+     template_name = 'paginas/inclusao_pedido.html'
 
 class IndexView(TemplateView):
      template_name = 'paginas/index.html'
-     
 
-class SobreView(TemplateView):
-     template_name = 'paginas/sobre.html'
+class LoginView(TemplateView):
+     template_name = 'paginas/login.html'
+

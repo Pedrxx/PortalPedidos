@@ -1,2 +1,57 @@
-{% extends "paginas/modelo.html" %}
+{% extends "paginas/modelo_index.html" %}
 
+{% block titulo %}
+    Portal de Pedidos - Home
+{% endblock titulo %}
+
+{% block titulo_main %}
+    Início
+{% endblock titulo_main %}
+
+{% block subtitulo_main %}
+    Dashboards
+{% endblock subtitulo_main %}
+
+{% block main_div %}
+
+
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Lista de Pedidos
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Pedido</th>
+                    <th>Data de Inclusão</th>
+                    <th>Número da Nota</th>
+                    <th>Status</th>
+                    <th>Outras Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>01/01/2024</td>
+                    <td>123456</td>
+                    <td>Em processamento</td>
+                    <td>
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                            </svg>
+                        </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Visualizar</a></li>
+                            <li><a class="dropdown-item" href="#">Reenviar</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">DANFE</a></li>
+                            <li><a class="dropdown-item" href="#">XML</a></li>
+                          </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock main_div %}

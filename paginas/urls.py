@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import IndexView, SobreView
+from .views import IndexView, LoginView, InserirView
 
 urlpatterns = [
-    # path('rotas'/, suaView, name='pagina-inicial')
     path('index/', IndexView.as_view(), name='index'),
-    # path('sobre/', SobreView.as_view(), name='sobre'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('inserir/', InserirView.as_view(), name='inserir')
 ]
